@@ -1,17 +1,14 @@
 
-    //import required classes and packages
 import java.util.Scanner;
 
-    //create ATMExample class to implement the ATM functionality
     public class ATMExample
     {
-        //main method starts
+
         public static void main(String args[] )
         {
-            //declare and initialize balance, withdraw, and deposit
+            
             int balance = 100000, withdraw, deposit;
 
-            //create scanner class object to get choice of user
             Scanner sc = new Scanner(System.in);
 
             while(true)
@@ -23,7 +20,7 @@ import java.util.Scanner;
                 System.out.println("Choose 4 for EXIT");
                 System.out.print("Choose the operation you want to perform:");
 
-                //get choice from user
+                // user choice
                 int choice = sc.nextInt();
                 switch(choice)
                 {
@@ -33,7 +30,7 @@ import java.util.Scanner;
                         //get the withdrawl money from user
                         withdraw = sc.nextInt();
 
-                        //check whether the balance is greater than or equal to the withdrawal amount
+                        //check balance is greater than or equal to the withdrawal amount
                         if(balance >= withdraw)
                         {
                             //remove the withdrawl amount from the total balance
@@ -52,7 +49,7 @@ import java.util.Scanner;
 
                         System.out.print("Enter money to be deposited:");
 
-                        //get deposite amount from te user
+                        //get deposite amount 
                         deposit = sc.nextInt();
 
                         //add the deposit amount to the total balanace
@@ -68,7 +65,7 @@ import java.util.Scanner;
                         break;
 
                     case 4:
-                        //exit from the menu
+                        //exit menu
                         System.exit(0);
                 }
             }
